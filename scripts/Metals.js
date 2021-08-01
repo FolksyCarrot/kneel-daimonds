@@ -1,4 +1,4 @@
-import { getMetals, setMetal } from "./database.js"
+import { getMetals, setMetal, getOrderBuilder } from "./database.js"
 
 const metals = getMetals()
 
@@ -8,6 +8,8 @@ document.addEventListener(
         if (event.target.name === "metal") {
             
             setMetal(parseInt(event.target.value))
+            console.log(getOrderBuilder())
+            
             
         }
     }
